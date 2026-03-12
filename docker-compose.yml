@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  face_service:
+    build:
+      context: .
+      dockerfile: face_service/Dockerfile
+      args:
+        ORT_PACKAGE: onnxruntime
+    ports:
+      - "8001:8001"
+    environment:
+      - FACE_DB_DIR=/app/face_db/authorized
+      - EMBEDDINGS_PATH=/app/face_db/embeddings.json
+      - ARC_THRESHOLD=0.38
+      - DET_SIZE=448
+      - FACE_USE_GPU=0
+      - FACE_GPU_DEVICE_ID=0
+      - FACE_RUNTIME_PROFILE=cpu-balanced
+      - FACE_SERVER_WORKERS=1
+      - FACE_CPU_TARGET=concurrent_throughput
+      - OMP_NUM_THREADS=6
+      - OMP_WAIT_POLICY=PASSIVE
+      - OMP_PROC_BIND=TRUE
+      - OMP_PLACES=cores
+    command: ["sh", "-lc", "uvicorn app:app --host 0.0.0.0 --port 8001 --workers ${FACE_SERVER_WORKERS:-2}"]
+    restart: unless-stopped

@@ -1,0 +1,45 @@
+CPU Face Verification Results
+
+Run configuration
+  Stage: stage1_cpu_tuning_10
+  VGG root: C:\Users\deepa\Desktop\BlockVault\BlockVault FR\datasets\VGGface2_HQ_1\VGGface2_None_norm_512_true_bygfpgan
+  Max images: 10
+  Num workers: 10
+
+Detector sweep
+  det_size=320 backend=process p95(local)=1324.32ms EER=0.0000 TAR@1e-4=1.0000 no_face=0
+  det_size=384 backend=process p95(local)=1430.13ms EER=0.0000 TAR@1e-4=1.0000 no_face=0
+  det_size=448 backend=process p95(local)=1480.72ms EER=0.0000 TAR@1e-4=1.0000 no_face=0
+
+Skipped detector sizes
+  det_size=640 error=No embeddings found for det_size=640 root=C:\Users\deepa\Desktop\BlockVault\BlockVault FR\datasets\VGGface2_HQ_1\VGGface2_None_norm_512_true_bygfpgan (total=10 read_fail=0 no_face=10 backend=process).
+
+Selected CPU config
+  det_size: 320
+  threshold: 0.4192
+  selected workers: 1
+
+VGGFace2 metrics
+  Parallel backend: process
+  Total images: 10
+  Classes: 5
+  Embedded images: 10
+  Skipped images: 0
+  read_fail=0 no_face=0
+  ROC-AUC: 1.0000
+  EER: 0.0000 @ threshold 0.4192
+  TAR@FAR=1e-02: 1.0000 @ threshold 0.4192
+  TAR@FAR=1e-03: 1.0000 @ threshold 0.4192
+  TAR@FAR=1e-04: 1.0000 @ threshold 0.4192
+  Rank-1: 1.0000
+  Enrolled accept rate: 0.7500
+  Unknown reject rate: 1.0000
+
+Latency
+  Local verify: p50=1007.75ms p95=1324.32ms p99=1374.18ms
+  HTTP /verify (4 clients, workers=1): p50=3970.39ms p95=6042.04ms p99=6181.77ms
+
+Worker topology sweep
+  workers=1 single_p95=1645.46ms four_client_p95=6042.04ms four_client_rps=0.91
+  workers=2 single_p95=1959.77ms four_client_p95=6793.20ms four_client_rps=0.70
+  workers=3 single_p95=2210.17ms four_client_p95=8369.46ms four_client_rps=0.66

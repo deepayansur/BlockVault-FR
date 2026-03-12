@@ -1,0 +1,10 @@
+numpy
+opencv-python
+requests
+streamlit
+streamlit-webrtc
+av
+pillow
+scikit-learn
+tqdm
+scipy

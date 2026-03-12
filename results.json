@@ -1,0 +1,1468 @@
+{
+  "run": {
+    "stage": "stage1_cpu_tuning_10",
+    "vgg_root": "C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\datasets\\VGGface2_HQ_1\\VGGface2_None_norm_512_true_bygfpgan",
+    "max_images": 10,
+    "num_workers": 10,
+    "bootstrap": 0,
+    "seed": 0
+  },
+  "detector_sweep": [
+    {
+      "dataset": "VGGFace2",
+      "root": "C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\datasets\\VGGface2_HQ_1\\VGGface2_None_norm_512_true_bygfpgan",
+      "config": {
+        "det_size": 320,
+        "max_images": 10,
+        "genuine": 50000,
+        "impostor": 50000,
+        "seed": 0,
+        "num_workers": 10,
+        "bootstrap": 0,
+        "use_gpu": false
+      },
+      "coverage": {
+        "total_images": 10,
+        "embedded_images": 10,
+        "skipped_images": 0,
+        "classes": 5,
+        "read_fail": 0,
+        "no_face": 0,
+        "embedded_keys": [
+          "n000306\\0304_01.jpg",
+          "n000306\\0472_01.jpg",
+          "n001770\\0312_01.jpg",
+          "n001770\\0024_01.jpg",
+          "n001162\\0149_01.jpg",
+          "n001162\\0016_01.jpg",
+          "n000937\\0082_01.jpg",
+          "n000937\\0101_01.jpg",
+          "n001693\\0211_01.jpg",
+          "n001693\\0285_01.jpg"
+        ]
+      },
+      "verification": {
+        "pairs": 100000,
+        "positives": 50000,
+        "negatives": 50000,
+        "eer": {
+          "value": 0.0,
+          "threshold": 0.4191969931125641
+        },
+        "roc_auc": 1.0,
+        "far_targets": {
+          "1e-02": {
+            "far": 0.01,
+            "tar": 1.0,
+            "threshold": 0.4191969931125641,
+            "fnmr": 0.0
+          },
+          "1e-03": {
+            "far": 0.001,
+            "tar": 1.0,
+            "threshold": 0.4191969931125641,
+            "fnmr": 0.0
+          },
+          "1e-04": {
+            "far": 0.0001,
+            "tar": 1.0,
+            "threshold": 0.4191969931125641,
+            "fnmr": 0.0
+          }
+        },
+        "confidence_intervals": {}
+      },
+      "authorization": {
+        "gallery_size": 4,
+        "enrolled_probe_count": 4,
+        "unknown_probe_count": 2,
+        "enrolled_identity_count": 4,
+        "unknown_identity_count": 1,
+        "rank1": 1.0,
+        "enrolled_accept_rate": 0.75,
+        "unknown_reject_rate": 1.0,
+        "threshold": 0.4191969931125641
+      },
+      "execution": {
+        "execution_device": "cpu",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "available_providers": [
+          "TensorrtExecutionProvider",
+          "CUDAExecutionProvider",
+          "CPUExecutionProvider"
+        ],
+        "gpu_device_id": 0,
+        "det_size": 320,
+        "arc_threshold": 0.38,
+        "runtime_profile": "default",
+        "server_workers": 1,
+        "cpu_target": "concurrent_throughput",
+        "omp_num_threads": "",
+        "omp_wait_policy": "",
+        "omp_proc_bind": "",
+        "omp_places": ""
+      },
+      "parallel_backend": "process",
+      "cache": {
+        "path": "C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\eval\\cache_vgg_det320_10.npz",
+        "metadata": {
+          "cache_context": "vggface2:C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\datasets\\VGGface2_HQ_1\\VGGface2_None_norm_512_true_bygfpgan:10:0",
+          "det_size": 320,
+          "use_gpu": false,
+          "execution_device": "cpu",
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "item_count": 10,
+          "slice_fingerprint": "f6b7cd108787f6463d2457a0806f4c86e9bd295b"
+        },
+        "hit_count": 0,
+        "miss_count": 10
+      },
+      "latency": {
+        "local": {
+          "mode": "local",
+          "requests": 20,
+          "throughput_rps": 0.9688812163399743,
+          "wall_ms": {
+            "p50": 1007.746049999696,
+            "p95": 1324.3233100027282,
+            "p99": 1374.1779419991506,
+            "mean": 1032.1171600002344
+          },
+          "timings_ms": {
+            "decode": {
+              "p50": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "mean": 0.0
+            },
+            "infer": {
+              "p50": 1007.615,
+              "p95": 1323.393,
+              "p99": 1373.9026,
+              "mean": 1031.9434999999999
+            },
+            "match": {
+              "p50": 0.06,
+              "p95": 0.10800000000000026,
+              "p99": 0.38159999999999955,
+              "mean": 0.08349999999999999
+            },
+            "total": {
+              "p50": 1007.69,
+              "p95": 1323.4720000000002,
+              "p99": 1373.9663999999998,
+              "mean": 1032.0295
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "VGGFace2",
+      "root": "C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\datasets\\VGGface2_HQ_1\\VGGface2_None_norm_512_true_bygfpgan",
+      "config": {
+        "det_size": 384,
+        "max_images": 10,
+        "genuine": 50000,
+        "impostor": 50000,
+        "seed": 0,
+        "num_workers": 10,
+        "bootstrap": 0,
+        "use_gpu": false
+      },
+      "coverage": {
+        "total_images": 10,
+        "embedded_images": 10,
+        "skipped_images": 0,
+        "classes": 5,
+        "read_fail": 0,
+        "no_face": 0,
+        "embedded_keys": [
+          "n000306\\0304_01.jpg",
+          "n000306\\0472_01.jpg",
+          "n001770\\0312_01.jpg",
+          "n001770\\0024_01.jpg",
+          "n001162\\0149_01.jpg",
+          "n001162\\0016_01.jpg",
+          "n000937\\0082_01.jpg",
+          "n000937\\0101_01.jpg",
+          "n001693\\0211_01.jpg",
+          "n001693\\0285_01.jpg"
+        ]
+      },
+      "verification": {
+        "pairs": 100000,
+        "positives": 50000,
+        "negatives": 50000,
+        "eer": {
+          "value": 0.0,
+          "threshold": 0.45139986276626587
+        },
+        "roc_auc": 1.0,
+        "far_targets": {
+          "1e-02": {
+            "far": 0.01,
+            "tar": 1.0,
+            "threshold": 0.45139986276626587,
+            "fnmr": 0.0
+          },
+          "1e-03": {
+            "far": 0.001,
+            "tar": 1.0,
+            "threshold": 0.45139986276626587,
+            "fnmr": 0.0
+          },
+          "1e-04": {
+            "far": 0.0001,
+            "tar": 1.0,
+            "threshold": 0.45139986276626587,
+            "fnmr": 0.0
+          }
+        },
+        "confidence_intervals": {}
+      },
+      "authorization": {
+        "gallery_size": 4,
+        "enrolled_probe_count": 4,
+        "unknown_probe_count": 2,
+        "enrolled_identity_count": 4,
+        "unknown_identity_count": 1,
+        "rank1": 1.0,
+        "enrolled_accept_rate": 0.75,
+        "unknown_reject_rate": 1.0,
+        "threshold": 0.45139986276626587
+      },
+      "execution": {
+        "execution_device": "cpu",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "available_providers": [
+          "TensorrtExecutionProvider",
+          "CUDAExecutionProvider",
+          "CPUExecutionProvider"
+        ],
+        "gpu_device_id": 0,
+        "det_size": 384,
+        "arc_threshold": 0.38,
+        "runtime_profile": "default",
+        "server_workers": 1,
+        "cpu_target": "concurrent_throughput",
+        "omp_num_threads": "",
+        "omp_wait_policy": "",
+        "omp_proc_bind": "",
+        "omp_places": ""
+      },
+      "parallel_backend": "process",
+      "cache": {
+        "path": "C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\eval\\cache_vgg_det384_10.npz",
+        "metadata": {
+          "cache_context": "vggface2:C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\datasets\\VGGface2_HQ_1\\VGGface2_None_norm_512_true_bygfpgan:10:0",
+          "det_size": 384,
+          "use_gpu": false,
+          "execution_device": "cpu",
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "item_count": 10,
+          "slice_fingerprint": "f6b7cd108787f6463d2457a0806f4c86e9bd295b"
+        },
+        "hit_count": 0,
+        "miss_count": 10
+      },
+      "latency": {
+        "local": {
+          "mode": "local",
+          "requests": 20,
+          "throughput_rps": 0.8495911954078147,
+          "wall_ms": {
+            "p50": 1124.2351499986398,
+            "p95": 1430.1263700019267,
+            "p99": 1789.847593998674,
+            "mean": 1177.0356199996968
+          },
+          "timings_ms": {
+            "decode": {
+              "p50": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "mean": 0.0
+            },
+            "infer": {
+              "p50": 1124.11,
+              "p95": 1430.0250000000003,
+              "p99": 1789.7329999999995,
+              "mean": 1176.923
+            },
+            "match": {
+              "p50": 0.065,
+              "p95": 0.07050000000000002,
+              "p99": 0.07809999999999999,
+              "mean": 0.0655
+            },
+            "total": {
+              "p50": 1124.19,
+              "p95": 1430.0855000000004,
+              "p99": 1789.8010999999995,
+              "mean": 1176.99
+            }
+          }
+        }
+      }
+    },
+    {
+      "dataset": "VGGFace2",
+      "root": "C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\datasets\\VGGface2_HQ_1\\VGGface2_None_norm_512_true_bygfpgan",
+      "config": {
+        "det_size": 448,
+        "max_images": 10,
+        "genuine": 50000,
+        "impostor": 50000,
+        "seed": 0,
+        "num_workers": 10,
+        "bootstrap": 0,
+        "use_gpu": false
+      },
+      "coverage": {
+        "total_images": 10,
+        "embedded_images": 10,
+        "skipped_images": 0,
+        "classes": 5,
+        "read_fail": 0,
+        "no_face": 0,
+        "embedded_keys": [
+          "n000306\\0304_01.jpg",
+          "n000306\\0472_01.jpg",
+          "n001770\\0312_01.jpg",
+          "n001770\\0024_01.jpg",
+          "n001162\\0149_01.jpg",
+          "n001162\\0016_01.jpg",
+          "n000937\\0082_01.jpg",
+          "n000937\\0101_01.jpg",
+          "n001693\\0211_01.jpg",
+          "n001693\\0285_01.jpg"
+        ]
+      },
+      "verification": {
+        "pairs": 100000,
+        "positives": 50000,
+        "negatives": 50000,
+        "eer": {
+          "value": 0.0,
+          "threshold": 0.4473382830619812
+        },
+        "roc_auc": 1.0,
+        "far_targets": {
+          "1e-02": {
+            "far": 0.01,
+            "tar": 1.0,
+            "threshold": 0.4473382830619812,
+            "fnmr": 0.0
+          },
+          "1e-03": {
+            "far": 0.001,
+            "tar": 1.0,
+            "threshold": 0.4473382830619812,
+            "fnmr": 0.0
+          },
+          "1e-04": {
+            "far": 0.0001,
+            "tar": 1.0,
+            "threshold": 0.4473382830619812,
+            "fnmr": 0.0
+          }
+        },
+        "confidence_intervals": {}
+      },
+      "authorization": {
+        "gallery_size": 4,
+        "enrolled_probe_count": 4,
+        "unknown_probe_count": 2,
+        "enrolled_identity_count": 4,
+        "unknown_identity_count": 1,
+        "rank1": 1.0,
+        "enrolled_accept_rate": 0.75,
+        "unknown_reject_rate": 1.0,
+        "threshold": 0.4473382830619812
+      },
+      "execution": {
+        "execution_device": "cpu",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "available_providers": [
+          "TensorrtExecutionProvider",
+          "CUDAExecutionProvider",
+          "CPUExecutionProvider"
+        ],
+        "gpu_device_id": 0,
+        "det_size": 448,
+        "arc_threshold": 0.38,
+        "runtime_profile": "default",
+        "server_workers": 1,
+        "cpu_target": "concurrent_throughput",
+        "omp_num_threads": "",
+        "omp_wait_policy": "",
+        "omp_proc_bind": "",
+        "omp_places": ""
+      },
+      "parallel_backend": "process",
+      "cache": {
+        "path": "C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\eval\\cache_vgg_det448_10.npz",
+        "metadata": {
+          "cache_context": "vggface2:C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\datasets\\VGGface2_HQ_1\\VGGface2_None_norm_512_true_bygfpgan:10:0",
+          "det_size": 448,
+          "use_gpu": false,
+          "execution_device": "cpu",
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "item_count": 10,
+          "slice_fingerprint": "f6b7cd108787f6463d2457a0806f4c86e9bd295b"
+        },
+        "hit_count": 0,
+        "miss_count": 10
+      },
+      "latency": {
+        "local": {
+          "mode": "local",
+          "requests": 20,
+          "throughput_rps": 0.81201091466101,
+          "wall_ms": {
+            "p50": 1214.4238000000769,
+            "p95": 1480.7177200000297,
+            "p99": 1560.5286639973199,
+            "mean": 1231.5095100004328
+          },
+          "timings_ms": {
+            "decode": {
+              "p50": 0.0,
+              "p95": 0.0,
+              "p99": 0.0,
+              "mean": 0.0
+            },
+            "infer": {
+              "p50": 1214.315,
+              "p95": 1480.611,
+              "p99": 1560.4262,
+              "mean": 1231.388
+            },
+            "match": {
+              "p50": 0.07,
+              "p95": 0.08,
+              "p99": 0.08,
+              "mean": 0.0675
+            },
+            "total": {
+              "p50": 1214.38,
+              "p95": 1480.671,
+              "p99": 1560.4861999999998,
+              "mean": 1231.455
+            }
+          }
+        }
+      }
+    }
+  ],
+  "failed_detector_sweep": [
+    {
+      "det_size": 640,
+      "error": "No embeddings found for det_size=640 root=C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\datasets\\VGGface2_HQ_1\\VGGface2_None_norm_512_true_bygfpgan (total=10 read_fail=0 no_face=10 backend=process)."
+    }
+  ],
+  "selected_config": {
+    "dataset": "VGGFace2",
+    "root": "C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\datasets\\VGGface2_HQ_1\\VGGface2_None_norm_512_true_bygfpgan",
+    "config": {
+      "det_size": 320,
+      "max_images": 10,
+      "genuine": 50000,
+      "impostor": 50000,
+      "seed": 0,
+      "num_workers": 10,
+      "bootstrap": 0,
+      "use_gpu": false
+    },
+    "coverage": {
+      "total_images": 10,
+      "embedded_images": 10,
+      "skipped_images": 0,
+      "classes": 5,
+      "read_fail": 0,
+      "no_face": 0,
+      "embedded_keys": [
+        "n000306\\0304_01.jpg",
+        "n000306\\0472_01.jpg",
+        "n001770\\0312_01.jpg",
+        "n001770\\0024_01.jpg",
+        "n001162\\0149_01.jpg",
+        "n001162\\0016_01.jpg",
+        "n000937\\0082_01.jpg",
+        "n000937\\0101_01.jpg",
+        "n001693\\0211_01.jpg",
+        "n001693\\0285_01.jpg"
+      ]
+    },
+    "verification": {
+      "pairs": 100000,
+      "positives": 50000,
+      "negatives": 50000,
+      "eer": {
+        "value": 0.0,
+        "threshold": 0.4191969931125641
+      },
+      "roc_auc": 1.0,
+      "far_targets": {
+        "1e-02": {
+          "far": 0.01,
+          "tar": 1.0,
+          "threshold": 0.4191969931125641,
+          "fnmr": 0.0
+        },
+        "1e-03": {
+          "far": 0.001,
+          "tar": 1.0,
+          "threshold": 0.4191969931125641,
+          "fnmr": 0.0
+        },
+        "1e-04": {
+          "far": 0.0001,
+          "tar": 1.0,
+          "threshold": 0.4191969931125641,
+          "fnmr": 0.0
+        }
+      },
+      "confidence_intervals": {}
+    },
+    "authorization": {
+      "gallery_size": 4,
+      "enrolled_probe_count": 4,
+      "unknown_probe_count": 2,
+      "enrolled_identity_count": 4,
+      "unknown_identity_count": 1,
+      "rank1": 1.0,
+      "enrolled_accept_rate": 0.75,
+      "unknown_reject_rate": 1.0,
+      "threshold": 0.4191969931125641
+    },
+    "execution": {
+      "execution_device": "cpu",
+      "providers": [
+        "CPUExecutionProvider"
+      ],
+      "available_providers": [
+        "TensorrtExecutionProvider",
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "gpu_device_id": 0,
+      "det_size": 320,
+      "arc_threshold": 0.38,
+      "runtime_profile": "default",
+      "server_workers": 1,
+      "cpu_target": "concurrent_throughput",
+      "omp_num_threads": "",
+      "omp_wait_policy": "",
+      "omp_proc_bind": "",
+      "omp_places": ""
+    },
+    "parallel_backend": "process",
+    "cache": {
+      "path": "C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\eval\\cache_vgg_det320_10.npz",
+      "metadata": {
+        "cache_context": "vggface2:C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\datasets\\VGGface2_HQ_1\\VGGface2_None_norm_512_true_bygfpgan:10:0",
+        "det_size": 320,
+        "use_gpu": false,
+        "execution_device": "cpu",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "item_count": 10,
+        "slice_fingerprint": "f6b7cd108787f6463d2457a0806f4c86e9bd295b"
+      },
+      "hit_count": 0,
+      "miss_count": 10
+    },
+    "latency": {
+      "local": {
+        "mode": "local",
+        "requests": 20,
+        "throughput_rps": 0.9688812163399743,
+        "wall_ms": {
+          "p50": 1007.746049999696,
+          "p95": 1324.3233100027282,
+          "p99": 1374.1779419991506,
+          "mean": 1032.1171600002344
+        },
+        "timings_ms": {
+          "decode": {
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "mean": 0.0
+          },
+          "infer": {
+            "p50": 1007.615,
+            "p95": 1323.393,
+            "p99": 1373.9026,
+            "mean": 1031.9434999999999
+          },
+          "match": {
+            "p50": 0.06,
+            "p95": 0.10800000000000026,
+            "p99": 0.38159999999999955,
+            "mean": 0.08349999999999999
+          },
+          "total": {
+            "p50": 1007.69,
+            "p95": 1323.4720000000002,
+            "p99": 1373.9663999999998,
+            "mean": 1032.0295
+          }
+        }
+      }
+    }
+  },
+  "vggface2": {
+    "dataset": "VGGFace2",
+    "root": "C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\datasets\\VGGface2_HQ_1\\VGGface2_None_norm_512_true_bygfpgan",
+    "config": {
+      "det_size": 320,
+      "max_images": 10,
+      "genuine": 50000,
+      "impostor": 50000,
+      "seed": 0,
+      "num_workers": 10,
+      "bootstrap": 0,
+      "use_gpu": false
+    },
+    "coverage": {
+      "total_images": 10,
+      "embedded_images": 10,
+      "skipped_images": 0,
+      "classes": 5,
+      "read_fail": 0,
+      "no_face": 0,
+      "embedded_keys": [
+        "n000306\\0304_01.jpg",
+        "n000306\\0472_01.jpg",
+        "n001770\\0312_01.jpg",
+        "n001770\\0024_01.jpg",
+        "n001162\\0149_01.jpg",
+        "n001162\\0016_01.jpg",
+        "n000937\\0082_01.jpg",
+        "n000937\\0101_01.jpg",
+        "n001693\\0211_01.jpg",
+        "n001693\\0285_01.jpg"
+      ]
+    },
+    "verification": {
+      "pairs": 100000,
+      "positives": 50000,
+      "negatives": 50000,
+      "eer": {
+        "value": 0.0,
+        "threshold": 0.4191969931125641
+      },
+      "roc_auc": 1.0,
+      "far_targets": {
+        "1e-02": {
+          "far": 0.01,
+          "tar": 1.0,
+          "threshold": 0.4191969931125641,
+          "fnmr": 0.0
+        },
+        "1e-03": {
+          "far": 0.001,
+          "tar": 1.0,
+          "threshold": 0.4191969931125641,
+          "fnmr": 0.0
+        },
+        "1e-04": {
+          "far": 0.0001,
+          "tar": 1.0,
+          "threshold": 0.4191969931125641,
+          "fnmr": 0.0
+        }
+      },
+      "confidence_intervals": {}
+    },
+    "authorization": {
+      "gallery_size": 4,
+      "enrolled_probe_count": 4,
+      "unknown_probe_count": 2,
+      "enrolled_identity_count": 4,
+      "unknown_identity_count": 1,
+      "rank1": 1.0,
+      "enrolled_accept_rate": 0.75,
+      "unknown_reject_rate": 1.0,
+      "threshold": 0.4191969931125641
+    },
+    "execution": {
+      "execution_device": "cpu",
+      "providers": [
+        "CPUExecutionProvider"
+      ],
+      "available_providers": [
+        "TensorrtExecutionProvider",
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "gpu_device_id": 0,
+      "det_size": 320,
+      "arc_threshold": 0.38,
+      "runtime_profile": "default",
+      "server_workers": 1,
+      "cpu_target": "concurrent_throughput",
+      "omp_num_threads": "",
+      "omp_wait_policy": "",
+      "omp_proc_bind": "",
+      "omp_places": ""
+    },
+    "parallel_backend": "process",
+    "cache": {
+      "path": "C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\eval\\cache_vgg_det320_10.npz",
+      "metadata": {
+        "cache_context": "vggface2:C:\\Users\\deepa\\Desktop\\BlockVault\\BlockVault FR\\datasets\\VGGface2_HQ_1\\VGGface2_None_norm_512_true_bygfpgan:10:0",
+        "det_size": 320,
+        "use_gpu": false,
+        "execution_device": "cpu",
+        "providers": [
+          "CPUExecutionProvider"
+        ],
+        "item_count": 10,
+        "slice_fingerprint": "f6b7cd108787f6463d2457a0806f4c86e9bd295b"
+      },
+      "hit_count": 0,
+      "miss_count": 10
+    },
+    "latency": {
+      "local": {
+        "mode": "local",
+        "requests": 20,
+        "throughput_rps": 0.9688812163399743,
+        "wall_ms": {
+          "p50": 1007.746049999696,
+          "p95": 1324.3233100027282,
+          "p99": 1374.1779419991506,
+          "mean": 1032.1171600002344
+        },
+        "timings_ms": {
+          "decode": {
+            "p50": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "mean": 0.0
+          },
+          "infer": {
+            "p50": 1007.615,
+            "p95": 1323.393,
+            "p99": 1373.9026,
+            "mean": 1031.9434999999999
+          },
+          "match": {
+            "p50": 0.06,
+            "p95": 0.10800000000000026,
+            "p99": 0.38159999999999955,
+            "mean": 0.08349999999999999
+          },
+          "total": {
+            "p50": 1007.69,
+            "p95": 1323.4720000000002,
+            "p99": 1373.9663999999998,
+            "mean": 1032.0295
+          }
+        }
+      }
+    }
+  },
+  "latency": {
+    "local": {
+      "mode": "local",
+      "requests": 20,
+      "throughput_rps": 0.9688812163399743,
+      "wall_ms": {
+        "p50": 1007.746049999696,
+        "p95": 1324.3233100027282,
+        "p99": 1374.1779419991506,
+        "mean": 1032.1171600002344
+      },
+      "timings_ms": {
+        "decode": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean": 0.0
+        },
+        "infer": {
+          "p50": 1007.615,
+          "p95": 1323.393,
+          "p99": 1373.9026,
+          "mean": 1031.9434999999999
+        },
+        "match": {
+          "p50": 0.06,
+          "p95": 0.10800000000000026,
+          "p99": 0.38159999999999955,
+          "mean": 0.08349999999999999
+        },
+        "total": {
+          "p50": 1007.69,
+          "p95": 1323.4720000000002,
+          "p99": 1373.9663999999998,
+          "mean": 1032.0295
+        }
+      }
+    }
+  },
+  "worker_topologies": {
+    "profiles": [
+      {
+        "workers": 1,
+        "health": {
+          "ok": true,
+          "db_size": 1,
+          "db_embeddings": 1,
+          "execution": {
+            "execution_device": "cpu",
+            "providers": [
+              "CPUExecutionProvider"
+            ],
+            "available_providers": [
+              "TensorrtExecutionProvider",
+              "CUDAExecutionProvider",
+              "CPUExecutionProvider"
+            ],
+            "gpu_device_id": 0,
+            "det_size": 320,
+            "arc_threshold": 0.38,
+            "runtime_profile": "cpu-workers-1",
+            "server_workers": 1,
+            "cpu_target": "concurrent_throughput",
+            "omp_num_threads": "6",
+            "omp_wait_policy": "PASSIVE",
+            "omp_proc_bind": "TRUE",
+            "omp_places": "cores"
+          },
+          "service": {
+            "profile": "cpu-workers-1",
+            "server_workers": 1,
+            "cpu_target": "concurrent_throughput"
+          }
+        },
+        "health_instances": [
+          {
+            "ok": true,
+            "db_size": 1,
+            "db_embeddings": 1,
+            "execution": {
+              "execution_device": "cpu",
+              "providers": [
+                "CPUExecutionProvider"
+              ],
+              "available_providers": [
+                "TensorrtExecutionProvider",
+                "CUDAExecutionProvider",
+                "CPUExecutionProvider"
+              ],
+              "gpu_device_id": 0,
+              "det_size": 320,
+              "arc_threshold": 0.38,
+              "runtime_profile": "cpu-workers-1",
+              "server_workers": 1,
+              "cpu_target": "concurrent_throughput",
+              "omp_num_threads": "6",
+              "omp_wait_policy": "PASSIVE",
+              "omp_proc_bind": "TRUE",
+              "omp_places": "cores"
+            },
+            "service": {
+              "profile": "cpu-workers-1",
+              "server_workers": 1,
+              "cpu_target": "concurrent_throughput"
+            }
+          }
+        ],
+        "single_client": {
+          "mode": "http",
+          "instances": 1,
+          "concurrency": 1,
+          "requests": 20,
+          "throughput_rps": 0.7238149631755234,
+          "wall_ms": {
+            "p50": 1517.3772500002087,
+            "p95": 1645.4624750003861,
+            "p99": 1762.1935349998237,
+            "mean": 1379.965280000033
+          },
+          "timings_ms": {
+            "decode": {
+              "p50": 1.375,
+              "p95": 1.6304999999999998,
+              "p99": 1.6381,
+              "mean": 1.381
+            },
+            "infer": {
+              "p50": 1512.74,
+              "p95": 1640.9595000000002,
+              "p99": 1757.6878999999997,
+              "mean": 1373.3335
+            },
+            "match": {
+              "p50": 0.08,
+              "p95": 0.09050000000000001,
+              "p99": 0.09809999999999999,
+              "mean": 0.078
+            },
+            "total": {
+              "p50": 1514.13,
+              "p95": 1642.481,
+              "p99": 1759.0801999999999,
+              "mean": 1374.7945
+            }
+          }
+        },
+        "four_client": {
+          "mode": "http",
+          "instances": 1,
+          "concurrency": 4,
+          "requests": 20,
+          "throughput_rps": 0.9137039845424054,
+          "wall_ms": {
+            "p50": 3970.386900000449,
+            "p95": 6042.043095000554,
+            "p99": 6181.769019000931,
+            "mean": 4031.9764699999723
+          },
+          "timings_ms": {
+            "decode": {
+              "p50": 0.995,
+              "p95": 1.3829999999999998,
+              "p99": 1.4285999999999999,
+              "mean": 1.0554999999999999
+            },
+            "infer": {
+              "p50": 3956.8,
+              "p95": 6036.796,
+              "p99": 6176.727199999999,
+              "mean": 3963.1025
+            },
+            "match": {
+              "p50": 0.12,
+              "p95": 0.1605,
+              "p99": 0.1681,
+              "mean": 0.1115
+            },
+            "total": {
+              "p50": 3958.33,
+              "p95": 6038.267500000001,
+              "p99": 6178.2215,
+              "mean": 3964.2699999999995
+            }
+          }
+        }
+      },
+      {
+        "workers": 2,
+        "health": {
+          "ok": true,
+          "db_size": 1,
+          "db_embeddings": 1,
+          "execution": {
+            "execution_device": "cpu",
+            "providers": [
+              "CPUExecutionProvider"
+            ],
+            "available_providers": [
+              "TensorrtExecutionProvider",
+              "CUDAExecutionProvider",
+              "CPUExecutionProvider"
+            ],
+            "gpu_device_id": 0,
+            "det_size": 448,
+            "arc_threshold": 0.38,
+            "runtime_profile": "cpu-workers-2",
+            "server_workers": 2,
+            "cpu_target": "concurrent_throughput",
+            "omp_num_threads": "6",
+            "omp_wait_policy": "PASSIVE",
+            "omp_proc_bind": "TRUE",
+            "omp_places": "cores"
+          },
+          "service": {
+            "profile": "cpu-workers-2",
+            "server_workers": 2,
+            "cpu_target": "concurrent_throughput"
+          }
+        },
+        "health_instances": [
+          {
+            "ok": true,
+            "db_size": 1,
+            "db_embeddings": 1,
+            "execution": {
+              "execution_device": "cpu",
+              "providers": [
+                "CPUExecutionProvider"
+              ],
+              "available_providers": [
+                "TensorrtExecutionProvider",
+                "CUDAExecutionProvider",
+                "CPUExecutionProvider"
+              ],
+              "gpu_device_id": 0,
+              "det_size": 448,
+              "arc_threshold": 0.38,
+              "runtime_profile": "cpu-workers-2",
+              "server_workers": 2,
+              "cpu_target": "concurrent_throughput",
+              "omp_num_threads": "6",
+              "omp_wait_policy": "PASSIVE",
+              "omp_proc_bind": "TRUE",
+              "omp_places": "cores"
+            },
+            "service": {
+              "profile": "cpu-workers-2",
+              "server_workers": 2,
+              "cpu_target": "concurrent_throughput"
+            }
+          },
+          {
+            "ok": true,
+            "db_size": 1,
+            "db_embeddings": 1,
+            "execution": {
+              "execution_device": "cpu",
+              "providers": [
+                "CPUExecutionProvider"
+              ],
+              "available_providers": [
+                "TensorrtExecutionProvider",
+                "CUDAExecutionProvider",
+                "CPUExecutionProvider"
+              ],
+              "gpu_device_id": 0,
+              "det_size": 448,
+              "arc_threshold": 0.38,
+              "runtime_profile": "cpu-workers-2",
+              "server_workers": 2,
+              "cpu_target": "concurrent_throughput",
+              "omp_num_threads": "6",
+              "omp_wait_policy": "PASSIVE",
+              "omp_proc_bind": "TRUE",
+              "omp_places": "cores"
+            },
+            "service": {
+              "profile": "cpu-workers-2",
+              "server_workers": 2,
+              "cpu_target": "concurrent_throughput"
+            }
+          }
+        ],
+        "single_client": {
+          "mode": "http",
+          "instances": 2,
+          "concurrency": 1,
+          "requests": 20,
+          "throughput_rps": 0.6667565743456766,
+          "wall_ms": {
+            "p50": 1479.5954499986692,
+            "p95": 1959.7674550008378,
+            "p99": 2005.350050999259,
+            "mean": 1486.9753499999206
+          },
+          "timings_ms": {
+            "decode": {
+              "p50": 0.89,
+              "p95": 0.9715,
+              "p99": 0.9943,
+              "mean": 0.876
+            },
+            "infer": {
+              "p50": 1474.0900000000001,
+              "p95": 1954.389,
+              "p99": 1992.6778,
+              "mean": 1465.8345
+            },
+            "match": {
+              "p50": 0.07,
+              "p95": 0.07100000000000002,
+              "p99": 0.08619999999999997,
+              "mean": 0.0695
+            },
+            "total": {
+              "p50": 1475.005,
+              "p95": 1955.411,
+              "p99": 1993.7301999999997,
+              "mean": 1466.778
+            }
+          }
+        },
+        "four_client": {
+          "mode": "http",
+          "instances": 2,
+          "concurrency": 4,
+          "requests": 20,
+          "throughput_rps": 0.700301253492348,
+          "wall_ms": {
+            "p50": 5441.8548499998,
+            "p95": 6793.196539998462,
+            "p99": 6878.382507998322,
+            "mean": 5202.584395000122
+          },
+          "timings_ms": {
+            "decode": {
+              "p50": 1.255,
+              "p95": 7.4055000000000675,
+              "p99": 80.29709999999987,
+              "mean": 6.097499999999999
+            },
+            "infer": {
+              "p50": 5381.575000000001,
+              "p95": 6788.665,
+              "p99": 6873.101000000001,
+              "mean": 5112.278
+            },
+            "match": {
+              "p50": 0.09,
+              "p95": 0.16,
+              "p99": 0.16,
+              "mean": 0.11000000000000001
+            },
+            "total": {
+              "p50": 5382.844999999999,
+              "p95": 6789.6325,
+              "p99": 6874.638500000001,
+              "mean": 5118.485
+            }
+          }
+        }
+      },
+      {
+        "workers": 3,
+        "health": {
+          "ok": true,
+          "db_size": 1,
+          "db_embeddings": 1,
+          "execution": {
+            "execution_device": "cpu",
+            "providers": [
+              "CPUExecutionProvider"
+            ],
+            "available_providers": [
+              "TensorrtExecutionProvider",
+              "CUDAExecutionProvider",
+              "CPUExecutionProvider"
+            ],
+            "gpu_device_id": 0,
+            "det_size": 320,
+            "arc_threshold": 0.38,
+            "runtime_profile": "cpu-workers-3",
+            "server_workers": 3,
+            "cpu_target": "concurrent_throughput",
+            "omp_num_threads": "6",
+            "omp_wait_policy": "PASSIVE",
+            "omp_proc_bind": "TRUE",
+            "omp_places": "cores"
+          },
+          "service": {
+            "profile": "cpu-workers-3",
+            "server_workers": 3,
+            "cpu_target": "concurrent_throughput"
+          }
+        },
+        "health_instances": [
+          {
+            "ok": true,
+            "db_size": 1,
+            "db_embeddings": 1,
+            "execution": {
+              "execution_device": "cpu",
+              "providers": [
+                "CPUExecutionProvider"
+              ],
+              "available_providers": [
+                "TensorrtExecutionProvider",
+                "CUDAExecutionProvider",
+                "CPUExecutionProvider"
+              ],
+              "gpu_device_id": 0,
+              "det_size": 320,
+              "arc_threshold": 0.38,
+              "runtime_profile": "cpu-workers-3",
+              "server_workers": 3,
+              "cpu_target": "concurrent_throughput",
+              "omp_num_threads": "6",
+              "omp_wait_policy": "PASSIVE",
+              "omp_proc_bind": "TRUE",
+              "omp_places": "cores"
+            },
+            "service": {
+              "profile": "cpu-workers-3",
+              "server_workers": 3,
+              "cpu_target": "concurrent_throughput"
+            }
+          },
+          {
+            "ok": true,
+            "db_size": 1,
+            "db_embeddings": 1,
+            "execution": {
+              "execution_device": "cpu",
+              "providers": [
+                "CPUExecutionProvider"
+              ],
+              "available_providers": [
+                "TensorrtExecutionProvider",
+                "CUDAExecutionProvider",
+                "CPUExecutionProvider"
+              ],
+              "gpu_device_id": 0,
+              "det_size": 320,
+              "arc_threshold": 0.38,
+              "runtime_profile": "cpu-workers-3",
+              "server_workers": 3,
+              "cpu_target": "concurrent_throughput",
+              "omp_num_threads": "6",
+              "omp_wait_policy": "PASSIVE",
+              "omp_proc_bind": "TRUE",
+              "omp_places": "cores"
+            },
+            "service": {
+              "profile": "cpu-workers-3",
+              "server_workers": 3,
+              "cpu_target": "concurrent_throughput"
+            }
+          },
+          {
+            "ok": true,
+            "db_size": 1,
+            "db_embeddings": 1,
+            "execution": {
+              "execution_device": "cpu",
+              "providers": [
+                "CPUExecutionProvider"
+              ],
+              "available_providers": [
+                "TensorrtExecutionProvider",
+                "CUDAExecutionProvider",
+                "CPUExecutionProvider"
+              ],
+              "gpu_device_id": 0,
+              "det_size": 320,
+              "arc_threshold": 0.38,
+              "runtime_profile": "cpu-workers-3",
+              "server_workers": 3,
+              "cpu_target": "concurrent_throughput",
+              "omp_num_threads": "6",
+              "omp_wait_policy": "PASSIVE",
+              "omp_proc_bind": "TRUE",
+              "omp_places": "cores"
+            },
+            "service": {
+              "profile": "cpu-workers-3",
+              "server_workers": 3,
+              "cpu_target": "concurrent_throughput"
+            }
+          }
+        ],
+        "single_client": {
+          "mode": "http",
+          "instances": 3,
+          "concurrency": 1,
+          "requests": 20,
+          "throughput_rps": 0.5291862096677419,
+          "wall_ms": {
+            "p50": 1873.4156999998959,
+            "p95": 2210.169159998623,
+            "p99": 2384.2799920011016,
+            "mean": 1882.6053250002587
+          },
+          "timings_ms": {
+            "decode": {
+              "p50": 1.44,
+              "p95": 1.828,
+              "p99": 1.9495999999999998,
+              "mean": 1.4655
+            },
+            "infer": {
+              "p50": 1862.15,
+              "p95": 2200.6145,
+              "p99": 2306.7789000000002,
+              "mean": 1854.8335
+            },
+            "match": {
+              "p50": 0.08,
+              "p95": 0.09,
+              "p99": 0.09,
+              "mean": 0.0775
+            },
+            "total": {
+              "p50": 1863.505,
+              "p95": 2202.322,
+              "p99": 2308.4483999999998,
+              "mean": 1856.3794999999998
+            }
+          }
+        },
+        "four_client": {
+          "mode": "http",
+          "instances": 3,
+          "concurrency": 4,
+          "requests": 20,
+          "throughput_rps": 0.6649811478176896,
+          "wall_ms": {
+            "p50": 5519.716300001164,
+            "p95": 8369.457570000486,
+            "p99": 8718.991753999107,
+            "mean": 5520.702390000042
+          },
+          "timings_ms": {
+            "decode": {
+              "p50": 1.24,
+              "p95": 1.467,
+              "p99": 1.5734,
+              "mean": 1.1995
+            },
+            "infer": {
+              "p50": 5424.805,
+              "p95": 8363.7275,
+              "p99": 8714.0495,
+              "mean": 5425.626
+            },
+            "match": {
+              "p50": 0.08,
+              "p95": 0.1515,
+              "p99": 0.17429999999999995,
+              "mean": 0.099
+            },
+            "total": {
+              "p50": 5426.105,
+              "p95": 8365.311000000002,
+              "p99": 8715.5342,
+              "mean": 5426.924
+            }
+          }
+        }
+      }
+    ],
+    "selected": {
+      "workers": 1,
+      "single_client": {
+        "mode": "http",
+        "instances": 1,
+        "concurrency": 1,
+        "requests": 20,
+        "throughput_rps": 0.7238149631755234,
+        "wall_ms": {
+          "p50": 1517.3772500002087,
+          "p95": 1645.4624750003861,
+          "p99": 1762.1935349998237,
+          "mean": 1379.965280000033
+        },
+        "timings_ms": {
+          "decode": {
+            "p50": 1.375,
+            "p95": 1.6304999999999998,
+            "p99": 1.6381,
+            "mean": 1.381
+          },
+          "infer": {
+            "p50": 1512.74,
+            "p95": 1640.9595000000002,
+            "p99": 1757.6878999999997,
+            "mean": 1373.3335
+          },
+          "match": {
+            "p50": 0.08,
+            "p95": 0.09050000000000001,
+            "p99": 0.09809999999999999,
+            "mean": 0.078
+          },
+          "total": {
+            "p50": 1514.13,
+            "p95": 1642.481,
+            "p99": 1759.0801999999999,
+            "mean": 1374.7945
+          }
+        }
+      },
+      "four_client": {
+        "mode": "http",
+        "instances": 1,
+        "concurrency": 4,
+        "requests": 20,
+        "throughput_rps": 0.9137039845424054,
+        "wall_ms": {
+          "p50": 3970.386900000449,
+          "p95": 6042.043095000554,
+          "p99": 6181.769019000931,
+          "mean": 4031.9764699999723
+        },
+        "timings_ms": {
+          "decode": {
+            "p50": 0.995,
+            "p95": 1.3829999999999998,
+            "p99": 1.4285999999999999,
+            "mean": 1.0554999999999999
+          },
+          "infer": {
+            "p50": 3956.8,
+            "p95": 6036.796,
+            "p99": 6176.727199999999,
+            "mean": 3963.1025
+          },
+          "match": {
+            "p50": 0.12,
+            "p95": 0.1605,
+            "p99": 0.1681,
+            "mean": 0.1115
+          },
+          "total": {
+            "p50": 3958.33,
+            "p95": 6038.267500000001,
+            "p99": 6178.2215,
+            "mean": 3964.2699999999995
+          }
+        }
+      },
+      "health": {
+        "ok": true,
+        "db_size": 1,
+        "db_embeddings": 1,
+        "execution": {
+          "execution_device": "cpu",
+          "providers": [
+            "CPUExecutionProvider"
+          ],
+          "available_providers": [
+            "TensorrtExecutionProvider",
+            "CUDAExecutionProvider",
+            "CPUExecutionProvider"
+          ],
+          "gpu_device_id": 0,
+          "det_size": 320,
+          "arc_threshold": 0.38,
+          "runtime_profile": "cpu-workers-1",
+          "server_workers": 1,
+          "cpu_target": "concurrent_throughput",
+          "omp_num_threads": "6",
+          "omp_wait_policy": "PASSIVE",
+          "omp_proc_bind": "TRUE",
+          "omp_places": "cores"
+        },
+        "service": {
+          "profile": "cpu-workers-1",
+          "server_workers": 1,
+          "cpu_target": "concurrent_throughput"
+        }
+      }
+    },
+    "selection_rule": "highest four-client throughput with no more than 15% p95 regression vs best single-client p95",
+    "best_single_client_p95_ms": 1645.4624750003861
+  }
+}
