@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   face_service:
     build:
@@ -22,5 +21,7 @@ services:
       - OMP_WAIT_POLICY=PASSIVE
       - OMP_PROC_BIND=TRUE
       - OMP_PLACES=cores
-    command: ["sh", "-lc", "uvicorn app:app --host 0.0.0.0 --port 8001 --workers ${FACE_SERVER_WORKERS:-2}"]
+    command: ["sh", "-lc", "uvicorn app:app --host 0.0.0.0 --port 8001 --workers ${FACE_SERVER_WORKERS:-1}"]
     restart: unless-stopped
+
+

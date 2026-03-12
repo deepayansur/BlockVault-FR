@@ -1,1 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+
 datasets/
+results.json
+results.txt
+smoke_results.json
+smoke_results.txt
+eval/*.npz
+
+face_service/face_db/embeddings.json
+face_service/face_db/authorized/*
+!face_service/face_db/authorized/.gitkeep
